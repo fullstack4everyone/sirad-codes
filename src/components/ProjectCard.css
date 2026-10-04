@@ -1,0 +1,208 @@
+.project-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  transition:
+    border-color var(--duration) var(--ease),
+    box-shadow var(--duration) var(--ease);
+}
+
+.project-card:hover {
+  border-color: #c9d6f5;
+  box-shadow: var(--shadow-md);
+}
+
+/* Image area */
+.project-card__media {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.project-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 400ms var(--ease);
+}
+
+.project-card:hover .project-card__media img {
+  transform: scale(1.03);
+}
+
+/* Text area */
+.project-card__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: var(--space-6);
+}
+
+.project-card__title {
+  font-size: var(--text-xl);
+}
+
+.project-card__text {
+  margin-top: var(--space-2);
+  color: var(--color-text-muted);
+}
+
+.project-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+}
+
+.project-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: auto;
+  padding-top: var(--space-5);
+}
+
+.project-card__note {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+}
+
+/* Preview frame for projects without a screenshot */
+.project-preview {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  background-image:
+    linear-gradient(var(--color-border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-border) 1px, transparent 1px);
+  background-size: 32px 32px;
+  background-position: center;
+}
+
+.project-preview__window {
+  width: 68%;
+  overflow: hidden;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  transition: transform 400ms var(--ease);
+}
+
+.project-card:hover .project-preview__window {
+  transform: translateY(-4px);
+}
+
+.project-preview__bar {
+  display: flex;
+  gap: 5px;
+  padding: 8px 10px;
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.project-preview__bar span {
+  width: 7px;
+  height: 7px;
+  background: #dfe3ea;
+  border-radius: 50%;
+}
+
+.project-preview__body {
+  display: grid;
+  grid-template-columns: 18% 1fr;
+  min-height: 90px;
+}
+
+.project-preview__side {
+  background: var(--color-dark);
+}
+
+.project-preview__main {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 12px;
+}
+
+.project-preview__line {
+  display: block;
+  width: 80%;
+  height: 6px;
+  background: #eceef2;
+  border-radius: 3px;
+}
+
+.project-preview__line--title {
+  width: 45%;
+  height: 9px;
+  background: #dde2ea;
+}
+
+.project-preview__line--short {
+  width: 55%;
+}
+
+.project-preview__blocks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7px;
+  margin-top: 4px;
+}
+
+.project-preview__blocks span {
+  height: 22px;
+  background: var(--color-accent-soft);
+  border-radius: 4px;
+}
+
+.project-preview__label {
+  padding: 3px 10px;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+}
+
+/* Placeholder card */
+.project-card--placeholder {
+  background: transparent;
+  border-style: dashed;
+}
+
+.project-card--placeholder:hover {
+  box-shadow: none;
+}
+
+.project-card__media--placeholder {
+  display: grid;
+  place-items: center;
+  background: transparent;
+  border-bottom-style: dashed;
+}
+
+.project-card__plus {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  color: var(--color-text-muted);
+  border: 1px dashed var(--color-border);
+  border-radius: 50%;
+}

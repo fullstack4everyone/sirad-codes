@@ -1,0 +1,201 @@
+.hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding-block: clamp(3rem, 2rem + 5vw, 6rem) clamp(4.5rem, 3rem + 5vw, 7rem);
+}
+
+/* Subtle grid pattern behind the hero */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image:
+    linear-gradient(var(--color-border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-border) 1px, transparent 1px);
+  background-size: 48px 48px;
+  opacity: 0.55;
+  mask-image: radial-gradient(ellipse 70% 60% at 70% 40%, #000 15%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 70% 40%, #000 15%, transparent 75%);
+  pointer-events: none;
+}
+
+.hero__inner {
+  display: grid;
+  gap: var(--space-8);
+  align-items: center;
+}
+
+/* Headline */
+.hero__title {
+  margin-top: var(--space-4);
+  font-size: clamp(2.25rem, 1.5rem + 3.5vw, 4rem);
+  max-width: 16ch;
+}
+
+/* Each headline line fades up on page load */
+.hero__line {
+  display: block;
+  animation: hero-line-in 700ms var(--ease) both;
+}
+
+.hero__line:nth-child(2) {
+  animation-delay: 120ms;
+}
+
+.hero__line:nth-child(3) {
+  animation-delay: 240ms;
+}
+
+/* "Real Problems." slowly shifts between blues */
+.hero__highlight {
+  padding-bottom: 0.06em;
+  background: linear-gradient(90deg, #1d4ed8, #3b82f6, #1e3a8a, #1d4ed8);
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation: hero-color-shift 8s ease-in-out infinite alternate;
+}
+
+.hero__text {
+  margin-top: var(--space-5);
+  font-size: var(--text-lg);
+  color: var(--color-text-muted);
+  max-width: 52ch;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+}
+
+/* Rotating "Built for ..." line */
+.hero__audience {
+  margin-top: var(--space-5);
+  font-size: var(--text-base);
+  color: var(--color-text-muted);
+}
+
+.hero__audience-word {
+  display: inline-block;
+  font-weight: 600;
+  color: var(--color-accent);
+  animation: hero-word-in 450ms var(--ease) both;
+}
+
+.hero__focus {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-5);
+  margin-top: var(--space-4);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.hero__focus li {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.hero__focus li::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--color-accent);
+  border-radius: 50%;
+}
+
+/* Scroll indicator: desktop only */
+.hero__scroll {
+  display: none;
+}
+
+/* Small phones: full-width buttons */
+@media (max-width: 479px) {
+  .hero__actions .btn {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    display: flex;
+    align-items: center;
+    min-height: calc(100svh - var(--nav-height));
+  }
+
+  .hero__inner {
+    grid-template-columns: 1.05fr 1fr;
+  }
+
+  .hero__scroll {
+    position: absolute;
+    bottom: var(--space-5);
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-1);
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    transform: translateX(-50%);
+    transition: color var(--duration) var(--ease);
+  }
+
+  .hero__scroll:hover {
+    color: var(--color-text);
+  }
+
+  .hero__scroll svg {
+    animation: hero-bounce 2s var(--ease) infinite;
+  }
+}
+
+/* Animations */
+@keyframes hero-line-in {
+  from {
+    opacity: 0;
+    transform: translateY(0.4em);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes hero-color-shift {
+  from {
+    background-position: 0% 50%;
+  }
+  to {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes hero-word-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes hero-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(4px);
+  }
+}

@@ -1,0 +1,45 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--color-text);
+  white-space: nowrap;
+}
+
+.logo__mark {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+}
+
+.logo__mark-bg {
+  fill: var(--color-dark);
+}
+
+.logo__mark-slash {
+  stroke: #3b82f6;
+}
+
+.logo__accent {
+  color: var(--color-accent);
+}
+
+/* Light version for dark backgrounds */
+.logo--light {
+  color: #ffffff;
+}
+
+.logo--light .logo__mark-bg {
+  fill: var(--color-accent);
+}
+
+.logo--light .logo__mark-slash {
+  stroke: #bfd1ff;
+}
+
+.logo--light .logo__accent {
+  color: #7aa2ff;
+}

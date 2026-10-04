@@ -1,0 +1,22 @@
+.section-header {
+  max-width: 640px;
+  margin-bottom: clamp(2.5rem, 2rem + 2vw, 3.5rem);
+}
+
+.section-header__title {
+  margin-top: var(--space-3);
+}
+
+.section-header__text {
+  margin-top: var(--space-4);
+  font-size: var(--text-lg);
+}
+
+.section-header--center {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.section-header--center .section-header__text {
+  margin-inline: auto;
+}
