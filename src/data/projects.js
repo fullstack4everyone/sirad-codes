@@ -53,15 +53,4 @@ export const projects = [
     liveUrl: null,
     codeUrl: null,
   },
-  {
-    id: 'school-finance',
-    title: 'School Finance Management System',
-    description:
-      'A web application for managing financial records, transactions, and reports.',
-    tech: ['React', 'PostgreSQL'],
-    image: null,
-    imageAlt: 'School Finance Management System reports screen',
-    liveUrl: null,
-    codeUrl: null,
-  },
 ]
