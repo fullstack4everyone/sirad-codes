@@ -20,6 +20,22 @@ function About() {
 
         <div className="about__grid">
           <div className="about__story">
+            <div className="about__profile">
+              <img
+                src="/images/about/sirad.webp"
+                alt="Mohamed Sirad Farah, founder of SIRAD CODES"
+                className="about__photo"
+                width="480"
+                height="480"
+                loading="lazy"
+                decoding="async"
+              />
+              <div>
+                <p className="about__name">Mohamed Sirad Farah</p>
+                <p className="about__role">Founder &amp; full-stack developer</p>
+              </div>
+            </div>
+
             <p className="about__lead">
               SIRAD CODES is a developer-led software brand focused on turning
               ideas and real-world problems into practical digital products.

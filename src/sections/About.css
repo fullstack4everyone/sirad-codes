@@ -3,6 +3,41 @@
   gap: var(--space-7);
 }
 
+/* Profile */
+.about__profile {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  margin-bottom: var(--space-6);
+}
+
+.about__photo {
+  width: 96px;
+  height: 96px;
+  flex-shrink: 0;
+  object-fit: cover;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.about__name {
+  font-size: var(--text-lg);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--color-text);
+}
+
+.about__role {
+  margin-top: var(--space-1);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
 /* Story */
 .about__lead {
   font-size: var(--text-xl);
@@ -84,6 +119,11 @@
 }
 
 @media (min-width: 560px) {
+  .about__photo {
+    width: 112px;
+    height: 112px;
+  }
+
   .about__fact {
     grid-template-columns: 120px 1fr;
     align-items: baseline;
