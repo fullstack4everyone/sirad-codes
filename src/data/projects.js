@@ -6,6 +6,42 @@
 
 export const projects = [
   {
+    id: 'hospital-management',
+    title: 'Garbahaarey Hospital Management System',
+    description:
+      'Built for Garbahaarey Hospital. Covers patient registration, consultations, laboratory requests, pharmacy stock and sales, dispensing and staff accounts, with low-stock and expiry alerts.',
+    tech: ['PHP', 'MySQL', 'Bootstrap', 'jQuery', 'AJAX'],
+    image: '/images/projects/hospital-management.webp',
+    imageAlt:
+      'Garbahaarey Hospital dashboard showing patient totals, daily pharmacy revenue, visits, low stock alerts and recent consultations',
+    liveUrl: null,
+    codeUrl: null,
+  },
+  {
+    id: 'secureguard',
+    title: 'SecureGuard Security Management System',
+    description:
+      'Built for a private security company. A web dashboard and mobile app for visitor check-in, gate control, guard attendance and breaks, incident reports, vehicles and patrols.',
+    tech: ['React', 'React Native', 'Node.js', 'Express', 'PostgreSQL'],
+    image: '/images/projects/secureguard.webp',
+    imageAlt:
+      'SecureGuard admin dashboard showing visitors, open and closed gates, staff present, guards on break, incidents and a visitor overview chart',
+    liveUrl: null,
+    codeUrl: null,
+  },
+  {
+    id: 'siradify-pos',
+    title: 'Siradify POS',
+    description:
+      'My own point-of-sale system for small shops in Kenya. Handles sales, M-Pesa STK Push payments, printed receipts, stock alerts, staff roles and daily email reports.',
+    tech: ['React', 'Node.js', 'Express', 'PostgreSQL', 'M-Pesa API'],
+    image: '/images/projects/siradify-pos.webp',
+    imageAlt:
+      'Siradify POS dashboard showing total and daily revenue, products, pending payments, a sales chart for the last 7 days and recent orders',
+    liveUrl: 'https://siradify-pos.vercel.app',
+    codeUrl: 'https://github.com/fullstack4everyone/siradify-web',
+  },
+  {
     id: 'cilmi-college',
     title: 'Cilmi College Management System',
     description:
@@ -14,17 +50,6 @@ export const projects = [
     image: '/images/projects/cilmi-college.webp',
     imageAlt:
       'Cilmi College dashboard showing student, revenue and payment totals, a monthly fees chart and students by course',
-    liveUrl: null,
-    codeUrl: null,
-  },
-  {
-    id: 'hospital-management',
-    title: 'Hospital Management System',
-    description:
-      'A web-based management system designed to organize hospital records and improve operational workflows.',
-    tech: ['Django', 'SQLite', 'HTML', 'CSS', 'JavaScript'],
-    image: null,
-    imageAlt: 'Hospital Management System records screen',
     liveUrl: null,
     codeUrl: null,
   },
@@ -38,17 +63,5 @@ export const projects = [
     imageAlt: 'School Finance Management System reports screen',
     liveUrl: null,
     codeUrl: null,
-  },
-  {
-    id: 'next-project',
-    title: 'Next Project',
-    description:
-      'A new system is in progress. Details and screenshots will be added here soon.',
-    tech: [],
-    image: null,
-    imageAlt: '',
-    liveUrl: null,
-    codeUrl: null,
-    isPlaceholder: true,
   },
 ]
