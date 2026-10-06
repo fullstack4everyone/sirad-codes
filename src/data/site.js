@@ -41,16 +41,22 @@ export const contactLinks = [
     display: 'Mohamed Sirad Farah',
   },
   {
-    id: 'facebook',
-    label: 'Facebook',
-    href: 'https://www.facebook.com/mohan.siraad',
-    display: 'mohan.siraad',
+    id: 'tiktok',
+    label: 'TikTok',
+    href: 'https://www.tiktok.com/@siradcodes',
+    display: '@siradcodes',
   },
   {
     id: 'youtube',
     label: 'YouTube',
     href: 'https://www.youtube.com/@mohamedsirad9953',
     display: '@mohamedsirad9953',
+  },
+  {
+    id: 'facebook',
+    label: 'Facebook',
+    href: 'https://www.facebook.com/mohan.siraad',
+    display: 'mohan.siraad',
   },
   {
     id: 'instagram',
@@ -62,12 +68,6 @@ export const contactLinks = [
     id: 'x',
     label: 'X',
     href: 'https://x.com/REPLACE_WITH_USERNAME',
-    display: '@REPLACE_WITH_USERNAME',
-  },
-  {
-    id: 'tiktok',
-    label: 'TikTok',
-    href: 'https://www.tiktok.com/@REPLACE_WITH_USERNAME',
     display: '@REPLACE_WITH_USERNAME',
   },
 ]
