@@ -1,30 +1,34 @@
 .logo {
   display: inline-flex;
   align-items: center;
-  gap: var(--space-2);
+  gap: 8px;
   font-size: 1.05rem;
   font-weight: 700;
-  letter-spacing: -0.01em;
-  color: var(--color-text);
+  letter-spacing: 0.02em;
+  color: #0b1220;
   white-space: nowrap;
 }
 
 .logo__mark {
-  width: 30px;
-  height: 30px;
+  width: 36px;
+  height: 36px;
   flex-shrink: 0;
 }
 
-.logo__mark-bg {
-  fill: var(--color-dark);
+.logo__mark-c {
+  stroke: #0b1220;
 }
 
-.logo__mark-slash {
-  stroke: #3b82f6;
+.logo__mark-s {
+  stroke: #2563eb;
+}
+
+.logo__mark-node {
+  fill: #2563eb;
 }
 
 .logo__accent {
-  color: var(--color-accent);
+  color: #2563eb;
 }
 
 /* Light version for dark backgrounds */
@@ -32,12 +36,16 @@
   color: #ffffff;
 }
 
-.logo--light .logo__mark-bg {
-  fill: var(--color-accent);
+.logo--light .logo__mark-c {
+  stroke: #ffffff;
 }
 
-.logo--light .logo__mark-slash {
-  stroke: #bfd1ff;
+.logo--light .logo__mark-s {
+  stroke: #7aa2ff;
+}
+
+.logo--light .logo__mark-node {
+  fill: #7aa2ff;
 }
 
 .logo--light .logo__accent {
