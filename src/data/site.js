@@ -49,8 +49,8 @@ export const contactLinks = [
   {
     id: 'youtube',
     label: 'YouTube',
-    href: 'https://www.youtube.com/@mohamedsirad9953',
-    display: '@mohamedsirad9953',
+    href: 'https://www.youtube.com/@siradcodes',
+    display: '@siradcodes',
   },
   {
     id: 'facebook',
